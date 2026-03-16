@@ -69,6 +69,9 @@ const translations = {
     projectCode: "Voir le code ↗",
     contactTitle: "Contact",
     contactText: "Vous avez un projet ou une opportunite ? Parlons-en.",
+    menuOpen: "Ouvrir le menu",
+    menuClose: "Fermer le menu",
+    overlayClose: "Fermer le menu",
     themeDark: "Theme sombre",
     themeLight: "Theme clair"
   },
@@ -142,12 +145,15 @@ const translations = {
     projectCode: "View code ↗",
     contactTitle: "Contact",
     contactText: "Have a project or an opportunity? Let's talk.",
+    menuOpen: "Open menu",
+    menuClose: "Close menu",
+    overlayClose: "Close menu",
     themeDark: "Dark mode",
     themeLight: "Light mode"
   }
 };
 
-const designVersion = "v10";
+const designVersion = "v11";
 if (localStorage.getItem("portfolio-design-version") !== designVersion) {
   localStorage.setItem("portfolio-design-version", designVersion);
   localStorage.setItem("portfolio-theme", "light");
@@ -157,6 +163,48 @@ let currentLang = localStorage.getItem("portfolio-lang") || "fr";
 let currentTheme = localStorage.getItem("portfolio-theme") || "light";
 const langToggle = document.getElementById("langToggle");
 const themeToggle = document.getElementById("themeToggle");
+const menuToggle = document.getElementById("menuToggle");
+const navPanel = document.getElementById("navPanel");
+const navOverlay = document.getElementById("navOverlay");
+const siteHeader = document.querySelector(".site-header");
+
+function updateMenuLabel() {
+  if (!menuToggle) {
+    return;
+  }
+
+  const isExpanded = menuToggle.getAttribute("aria-expanded") === "true";
+  const label = isExpanded
+    ? translations[currentLang].menuClose
+    : translations[currentLang].menuOpen;
+
+  menuToggle.setAttribute("aria-label", label);
+  navOverlay?.setAttribute("aria-label", translations[currentLang].overlayClose);
+}
+
+function closeMenu() {
+  if (!menuToggle || !navPanel) {
+    return;
+  }
+
+  menuToggle.setAttribute("aria-expanded", "false");
+  siteHeader?.classList.remove("is-open");
+  navOverlay?.classList.remove("is-visible");
+  document.body.classList.remove("menu-open");
+  updateMenuLabel();
+}
+
+function openMenu() {
+  if (!menuToggle || !navPanel) {
+    return;
+  }
+
+  menuToggle.setAttribute("aria-expanded", "true");
+  siteHeader?.classList.add("is-open");
+  navOverlay?.classList.add("is-visible");
+  document.body.classList.add("menu-open");
+  updateMenuLabel();
+}
 
 function applyTranslations(lang) {
   document.documentElement.lang = lang;
@@ -167,6 +215,7 @@ function applyTranslations(lang) {
     }
   });
   updateToggleLabels();
+  updateMenuLabel();
 }
 
 function updateToggleLabels() {
@@ -216,6 +265,49 @@ document.querySelectorAll(".reveal").forEach((element, index) => {
 
 const navLinks = [...document.querySelectorAll(".nav a")];
 const sectionIds = navLinks.map((link) => link.getAttribute("href")).filter(Boolean);
+
+if (menuToggle && navPanel) {
+  menuToggle.addEventListener("click", () => {
+    const isOpen = menuToggle.getAttribute("aria-expanded") === "true";
+    if (isOpen) {
+      closeMenu();
+    } else {
+      openMenu();
+    }
+  });
+
+  navLinks.forEach((link) => {
+    link.addEventListener("click", () => {
+      if (window.innerWidth <= 860) {
+        closeMenu();
+      }
+    });
+  });
+
+  window.addEventListener("resize", () => {
+    if (window.innerWidth > 860) {
+      closeMenu();
+    }
+  });
+
+  navOverlay?.addEventListener("click", closeMenu);
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") {
+      closeMenu();
+    }
+  });
+
+  document.addEventListener("click", (event) => {
+    if (window.innerWidth > 860) {
+      return;
+    }
+
+    if (siteHeader && !siteHeader.contains(event.target)) {
+      closeMenu();
+    }
+  });
+}
 
 const sectionObserver = new IntersectionObserver(
   (entries) => {

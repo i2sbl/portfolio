@@ -19,17 +19,32 @@
     <!-- ── Header nav ─────────────────────────────────────── -->
     <header class="site-header">
       <a class="brand" href="#hero" aria-label="Accueil">IB</a>
-      <nav class="nav" aria-label="Navigation principale">
-        <a href="#projets"    data-i18n="navProjects">Projets</a>
-        <a href="#about"      data-i18n="navAbout">A propos</a>
-        <a href="#experience" data-i18n="navExperience">Experience</a>
-        <a href="#contact"    data-i18n="navContact">Contact</a>
-      </nav>
-      <div class="nav-controls">
-        <button id="themeToggle" class="control" aria-label="Switch theme">Theme sombre</button>
-        <button id="langToggle"  class="control" aria-label="Switch language">EN</button>
+      <button
+        id="menuToggle"
+        class="menu-toggle"
+        type="button"
+        aria-expanded="false"
+        aria-controls="navPanel"
+        aria-label="Ouvrir le menu"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <div id="navPanel" class="nav-panel">
+        <nav class="nav" aria-label="Navigation principale">
+          <a href="#projets"    data-i18n="navProjects">Projets</a>
+          <a href="#about"      data-i18n="navAbout">A propos</a>
+          <a href="#experience" data-i18n="navExperience">Experience</a>
+          <a href="#contact"    data-i18n="navContact">Contact</a>
+        </nav>
+        <div class="nav-controls">
+          <button id="themeToggle" class="control" aria-label="Switch theme">Theme sombre</button>
+          <button id="langToggle"  class="control" aria-label="Switch language">EN</button>
+        </div>
       </div>
     </header>
+    <button id="navOverlay" class="nav-overlay" type="button" aria-label="Fermer le menu"></button>
 
     <!-- ── Hero ───────────────────────────────────────────── -->
     <section id="hero" class="hero">
