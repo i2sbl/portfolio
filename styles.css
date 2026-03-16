@@ -124,25 +124,90 @@ a { color: inherit; }
   align-self: flex-start;
 }
 
-/* Circular avatar with blue glow */
-.avatar {
+/* Profile container — holds avatar + orbit icons */
+.profile-container {
+  position: relative;
   width: 100%;
-  max-width: 190px;
-  margin: 0.25rem auto 0;
+  max-width: 220px;
   aspect-ratio: 1 / 1;
+  margin: 0.25rem auto 0;
+}
+
+/* Circular avatar — centered inside container */
+.avatar {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 128px;
+  height: 128px;
   object-fit: cover;
   object-position: center top;
   border-radius: 50%;
   box-shadow: 0 8px 32px var(--accent-glow);
-  display: block;
   border: 3px solid var(--surface);
   outline: 2px solid var(--line);
   transition: box-shadow 0.3s ease;
+  display: block;
 }
 
 .avatar:hover {
   box-shadow: 0 10px 40px var(--accent-glow), 0 0 0 4px var(--accent-tint);
 }
+
+/* Orbit icons */
+.orbit-icon {
+  position: absolute;
+  width: 36px;
+  height: 36px;
+  /* anchored at center of container */
+  left: 50%;
+  top: 50%;
+  margin-left: -18px;
+  margin-top: -18px;
+  border-radius: 50%;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow-sm);
+  display: grid;
+  place-items: center;
+  cursor: default;
+}
+
+.orbit-icon img {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+  pointer-events: none;
+}
+
+/* Fallback CSS orbits (JS overrides at runtime) */
+@keyframes orbit1 {
+  from { transform: rotate(0deg)   translateX(88px) rotate(0deg); }
+  to   { transform: rotate(360deg) translateX(88px) rotate(-360deg); }
+}
+@keyframes orbit2 {
+  from { transform: rotate(72deg)  translateX(88px) rotate(-72deg); }
+  to   { transform: rotate(432deg) translateX(88px) rotate(-432deg); }
+}
+@keyframes orbit3 {
+  from { transform: rotate(144deg) translateX(88px) rotate(-144deg); }
+  to   { transform: rotate(504deg) translateX(88px) rotate(-504deg); }
+}
+@keyframes orbit4 {
+  from { transform: rotate(216deg) translateX(88px) rotate(-216deg); }
+  to   { transform: rotate(576deg) translateX(88px) rotate(-576deg); }
+}
+@keyframes orbit5 {
+  from { transform: rotate(288deg) translateX(88px) rotate(-288deg); }
+  to   { transform: rotate(648deg) translateX(88px) rotate(-648deg); }
+}
+
+.orbit-icon-1 { animation: orbit1 32s linear infinite; }
+.orbit-icon-2 { animation: orbit2 40s linear infinite reverse; }
+.orbit-icon-3 { animation: orbit3 48s linear infinite; }
+.orbit-icon-4 { animation: orbit4 35s linear infinite reverse; }
+.orbit-icon-5 { animation: orbit5 43s linear infinite; }
 
 h1 {
   font-size: clamp(1.6rem, 2.8vw, 2.3rem);
@@ -664,8 +729,8 @@ h2 {
     text-align: left;
   }
 
-  .avatar {
-    margin: 0.25rem 0 0;
+  .profile-container {
+    max-width: 240px;
   }
 }
 

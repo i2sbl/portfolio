@@ -143,7 +143,7 @@ const translations = {
   }
 };
 
-const designVersion = "v8";
+const designVersion = "v9";
 if (localStorage.getItem("portfolio-design-version") !== designVersion) {
   localStorage.setItem("portfolio-design-version", designVersion);
   localStorage.setItem("portfolio-theme", "light");
@@ -241,3 +241,35 @@ sectionIds.forEach((id) => {
 document.getElementById("year").textContent = new Date().getFullYear();
 applyTheme(currentTheme);
 applyTranslations(currentLang);
+
+/* ── Orbit icons — randomized keyframes per page load ──────
+   Inspired by corentin1876.github.io/Corentin-Etienne/
+   Each icon gets a unique animation name injected in <style>,
+   varying radius (82–96px), duration (28–46s) and direction. */
+document.querySelectorAll(".orbit-icon").forEach((icon, i) => {
+  const duration   = 28 + Math.random() * 18;          // 28–46s
+  const reverse    = Math.random() > 0.5;
+  const startAngle = Math.random() * 360;
+  const ts         = Date.now();
+  const name       = `orb-${i}-${ts}`;
+  const r          = () => 82 + Math.random() * 14;    // 82–96px
+
+  const r0 = r(), r1 = r(), r2 = r(), r3 = r();
+  const a  = (n) => (startAngle + n * 90).toFixed(1);
+
+  const style = document.createElement("style");
+  style.textContent =
+    `@keyframes ${name} {` +
+    `0%   { transform: rotate(${a(0)}deg) translateX(${r0.toFixed(1)}px) rotate(-${a(0)}deg); }` +
+    `25%  { transform: rotate(${a(1)}deg) translateX(${r1.toFixed(1)}px) rotate(-${a(1)}deg); }` +
+    `50%  { transform: rotate(${a(2)}deg) translateX(${r2.toFixed(1)}px) rotate(-${a(2)}deg); }` +
+    `75%  { transform: rotate(${a(3)}deg) translateX(${r3.toFixed(1)}px) rotate(-${a(3)}deg); }` +
+    `100% { transform: rotate(${a(4)}deg) translateX(${r0.toFixed(1)}px) rotate(-${a(4)}deg); }` +
+    `}`;
+  document.head.appendChild(style);
+
+  icon.style.animation = `${name} ${duration.toFixed(1)}s ease-in-out ${reverse ? "reverse" : ""} infinite`;
+
+  icon.addEventListener("mouseenter", () => { icon.style.animationPlayState = "paused"; });
+  icon.addEventListener("mouseleave", () => { icon.style.animationPlayState = "running"; });
+});
