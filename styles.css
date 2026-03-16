@@ -540,7 +540,15 @@ h2 {
   font-size: 1rem;
   line-height: 1;
   flex-shrink: 0;
+  text-decoration: none;
   transition: color 0.2s, transform 0.2s;
+}
+
+/* Stretched link: rend toute la card cliquable quand l'arrow est un <a> */
+.project-arrow[href]::after {
+  content: "";
+  position: absolute;
+  inset: 0;
 }
 
 .project-card:hover .project-arrow {

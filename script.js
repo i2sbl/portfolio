@@ -58,7 +58,7 @@ const translations = {
       "Chartres",
     projectsTitle: "Projets selectionnes",
     p1Desc:
-      "Site vitrine sportif avec navigation mobile fluide.",
+      "Site vitrine sportif avec navigation mobile fluide et travail de referencement naturel (SEO).",
     p2Desc:
       "Site corporate orientee conversion et prise de contact.",
     p3Desc:
@@ -129,7 +129,7 @@ const translations = {
       "Chartres",
     projectsTitle: "Selected projects",
     p1Desc:
-      "Sports showcase website with smooth mobile navigation.",
+      "Sports showcase website with smooth mobile navigation and SEO optimisation.",
     p2Desc:
       "Conversion-oriented corporate website focused on contact actions.",
     p3Desc:
