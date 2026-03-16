@@ -65,6 +65,8 @@ const translations = {
       "Plateforme auto avec structure claire et consultation rapide.",
     p4Desc:
       "Projet interactif JavaScript autour du jeu Cluedo.",
+    projectVisit: "Voir le projet ↗",
+    projectCode: "Voir le code ↗",
     contactTitle: "Contact",
     contactText: "Vous avez un projet ou une opportunite ? Parlons-en.",
     themeDark: "Theme sombre",
@@ -136,6 +138,8 @@ const translations = {
       "Automotive platform with clear structure and fast browsing.",
     p4Desc:
       "Interactive JavaScript project around the Cluedo game.",
+    projectVisit: "View project ↗",
+    projectCode: "View code ↗",
     contactTitle: "Contact",
     contactText: "Have a project or an opportunity? Let's talk.",
     themeDark: "Dark mode",
@@ -143,7 +147,7 @@ const translations = {
   }
 };
 
-const designVersion = "v9";
+const designVersion = "v10";
 if (localStorage.getItem("portfolio-design-version") !== designVersion) {
   localStorage.setItem("portfolio-design-version", designVersion);
   localStorage.setItem("portfolio-theme", "light");
