@@ -137,6 +137,12 @@ const translations = {
   }
 };
 
+const designVersion = "v3";
+if (localStorage.getItem("portfolio-design-version") !== designVersion) {
+  localStorage.setItem("portfolio-design-version", designVersion);
+  localStorage.setItem("portfolio-theme", "light");
+}
+
 let currentLang = localStorage.getItem("portfolio-lang") || "fr";
 let currentTheme = localStorage.getItem("portfolio-theme") || "light";
 const langToggle = document.getElementById("langToggle");
