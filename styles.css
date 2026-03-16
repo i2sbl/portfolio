@@ -204,31 +204,6 @@ h1 {
   font-size: 0.83rem;
 }
 
-/* Controls */
-.sidebar-actions {
-  display: grid;
-  grid-template-columns: 1fr 58px;
-  gap: 0.5rem;
-}
-
-.control {
-  border: 1px solid var(--line);
-  border-radius: 999px;
-  background: var(--surface);
-  color: var(--muted);
-  font-family: inherit;
-  font-size: 0.78rem;
-  font-weight: 600;
-  padding: 0.42rem 0.7rem;
-  cursor: pointer;
-  transition: border-color 0.2s, color 0.2s;
-}
-
-.control:hover {
-  color: var(--text);
-  border-color: var(--subtle);
-}
-
 /* ── Content column ─────────────────────────────────────── */
 .content {
   display: grid;
@@ -238,19 +213,52 @@ h1 {
 
 /* Sticky top nav with backdrop blur */
 .top-nav {
-  padding: 0.55rem 0.85rem;
+  padding: 0.45rem 0.85rem;
   position: sticky;
   top: 1.4rem;
   z-index: 10;
   background: color-mix(in srgb, var(--surface) 85%, transparent);
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.4rem;
 }
 
 .nav {
   display: flex;
   flex-wrap: wrap;
   gap: 0.15rem;
+  flex: 1;
+  min-width: 0;
+}
+
+.nav-controls {
+  display: flex;
+  gap: 0.4rem;
+  flex-shrink: 0;
+  margin-left: auto;
+}
+
+.control {
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: transparent;
+  color: var(--muted);
+  font-family: inherit;
+  font-size: 0.78rem;
+  font-weight: 600;
+  padding: 0.38rem 0.7rem;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: border-color 0.2s, color 0.2s, background 0.2s;
+}
+
+.control:hover {
+  color: var(--text);
+  border-color: var(--subtle);
+  background: var(--accent-tint);
 }
 
 /* Underline expand animation */
@@ -640,9 +648,8 @@ h2 {
     position: static;
   }
 
-  .sidebar-actions {
-    grid-template-columns: 1fr 58px;
-    max-width: 280px;
+  .nav-controls {
+    margin-left: 0;
   }
 
   h1, .subtitle, .intro {
