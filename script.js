@@ -137,7 +137,7 @@ const translations = {
   }
 };
 
-const designVersion = "v3";
+const designVersion = "v4";
 if (localStorage.getItem("portfolio-design-version") !== designVersion) {
   localStorage.setItem("portfolio-design-version", designVersion);
   localStorage.setItem("portfolio-theme", "light");
@@ -202,6 +202,34 @@ const observer = new IntersectionObserver(
 document.querySelectorAll(".reveal").forEach((element, index) => {
   element.style.transitionDelay = `${Math.min(index * 50, 220)}ms`;
   observer.observe(element);
+});
+
+const navLinks = [...document.querySelectorAll(".nav a")];
+const sectionIds = navLinks.map((link) => link.getAttribute("href")).filter(Boolean);
+
+const sectionObserver = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (!entry.isIntersecting) {
+        return;
+      }
+
+      const currentId = `#${entry.target.id}`;
+      navLinks.forEach((link) => {
+        link.classList.toggle("is-active", link.getAttribute("href") === currentId);
+      });
+    });
+  },
+  {
+    threshold: 0.45
+  }
+);
+
+sectionIds.forEach((id) => {
+  const section = document.querySelector(id);
+  if (section) {
+    sectionObserver.observe(section);
+  }
 });
 
 document.getElementById("year").textContent = new Date().getFullYear();

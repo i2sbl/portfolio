@@ -4,55 +4,52 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Ilies Benali | Portfolio</title>
-    <meta
-      name="description"
-      content="Portfolio de Ilies Benali - etudiant developpeur web."
-    />
+    <meta name="description" content="Portfolio de Ilies Benali - etudiant developpeur web." />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;700;800&family=Plus+Jakarta+Sans:wght@400;500;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;700&family=Syne:wght@500;600;700&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <div class="bg-shape bg-shape-1" aria-hidden="true"></div>
-    <div class="bg-shape bg-shape-2" aria-hidden="true"></div>
+    <div class="aurora" aria-hidden="true"></div>
 
-    <header class="topbar">
-      <a class="brand" href="#home">IB</a>
-      <nav class="nav">
-        <a href="#about" data-i18n="navAbout">A propos</a>
-        <a href="#experience" data-i18n="navExperience">Experience</a>
-        <a href="#competences" data-i18n="navSkills">Competences</a>
-        <a href="#formation" data-i18n="navEducation">Formation</a>
-        <a href="#projects" data-i18n="navProjects">Projets</a>
-        <a href="#contact" data-i18n="navContact">Contact</a>
-      </nav>
-      <div class="topbar-actions">
-        <button id="themeToggle" class="chip-btn" aria-label="Switch theme">
-          Theme sombre
-        </button>
-        <button id="langToggle" class="chip-btn" aria-label="Switch language">EN</button>
+    <header class="site-header">
+      <div class="shell header-inner">
+        <a class="brand" href="#home">IB</a>
+        <nav class="nav">
+          <a href="#about" data-i18n="navAbout">A propos</a>
+          <a href="#experience" data-i18n="navExperience">Experience</a>
+          <a href="#competences" data-i18n="navSkills">Competences</a>
+          <a href="#formation" data-i18n="navEducation">Formation</a>
+          <a href="#projects" data-i18n="navProjects">Projets</a>
+          <a href="#contact" data-i18n="navContact">Contact</a>
+        </nav>
+        <div class="header-actions">
+          <button id="themeToggle" class="control" aria-label="Switch theme">Theme sombre</button>
+          <button id="langToggle" class="control" aria-label="Switch language">EN</button>
+        </div>
       </div>
     </header>
 
     <main>
-      <section id="home" class="hero wrapper reveal">
-        <div class="hero-copy">
+      <section id="home" class="hero shell reveal">
+        <div class="hero-content panel">
           <p class="eyebrow" data-i18n="eyebrow">Portfolio 2026</p>
           <h1 data-i18n="heroTitle">Ilies Benali</h1>
           <p class="hero-line" data-i18n="heroLine">Etudiant | Developpeur web</p>
-          <p class="subtitle" data-i18n="heroSubtitle">
+          <p class="hero-subtitle" data-i18n="heroSubtitle">
             Je construis des experiences web nettes, rapides et orientees resultat.
           </p>
           <div class="hero-cta">
             <a class="btn btn-primary" href="#projects" data-i18n="ctaProjects">Voir mes projets</a>
-            <a class="btn btn-secondary" href="https://www.linkedin.com/in/ilies-benali/" target="_blank" rel="noreferrer">LinkedIn</a>
+            <a class="btn btn-ghost" href="#contact" data-i18n="navContact">Contact</a>
           </div>
         </div>
-        <aside class="hero-panel">
+
+        <aside class="hero-side panel">
           <img src="photo.png" alt="Photo de Ilies Benali" />
           <ul class="facts">
             <li>
@@ -71,40 +68,43 @@
         </aside>
       </section>
 
-      <section id="about" class="wrapper section reveal">
+      <section id="about" class="shell block reveal">
         <div class="section-head">
           <h2 data-i18n="aboutTitle">A propos</h2>
         </div>
-        <div class="about-grid">
-          <p class="lead" data-i18n="aboutQuick">
-            Etudiant developpeur web base a Chartres, je transforme des idees metier en interfaces claires et efficaces.
-          </p>
-          <p data-i18n="aboutText">
-            Mon approche combine design utile, execution rapide et attention au detail.
-            Je privilegie des experiences fluides, des performances solides et une communication visuelle claire.
-          </p>
+        <div class="two-col">
+          <article class="panel">
+            <p class="lead" data-i18n="aboutQuick">
+              Etudiant developpeur web base a Chartres, je transforme des idees metier en interfaces claires et efficaces.
+            </p>
+          </article>
+          <article class="panel">
+            <p data-i18n="aboutText">
+              Mon approche combine design utile, execution rapide et attention au detail. Je privilegie des experiences fluides, des performances solides et une communication visuelle claire.
+            </p>
+          </article>
         </div>
       </section>
 
-      <section id="experience" class="wrapper section reveal">
+      <section id="experience" class="shell block reveal">
         <div class="section-head">
           <h2 data-i18n="experienceTitle">Experience</h2>
+          <p class="section-note" data-i18n="linkedinSource">
+            Contenu adapte d'apres les informations publiques de ton profil LinkedIn.
+          </p>
         </div>
-        <p class="section-note" data-i18n="linkedinSource">
-          Contenu adapte d'apres les informations publiques de ton profil LinkedIn.
-        </p>
         <div class="timeline">
-          <article class="timeline-item reveal">
+          <article class="timeline-item panel reveal">
             <h3 data-i18n="exp1Title">Entrepreneur en solutions IA</h3>
             <p class="meta" data-i18n="exp1Meta">Projets independants</p>
             <p data-i18n="exp1Desc">Conception de solutions web et IA pour etudiants et professionnels.</p>
           </article>
-          <article class="timeline-item reveal">
+          <article class="timeline-item panel reveal">
             <h3 data-i18n="exp2Title">Developpeur web</h3>
             <p class="meta" data-i18n="exp2Meta">Sites vitrines et interfaces metier</p>
             <p data-i18n="exp2Desc">Realisation de projets front-end de la structure HTML jusqu'au rendu final.</p>
           </article>
-          <article class="timeline-item reveal">
+          <article class="timeline-item panel reveal">
             <h3 data-i18n="exp3Title">FC Leves</h3>
             <p class="meta" data-i18n="exp3Meta">Experience visible publiquement</p>
             <p data-i18n="exp3Desc">Participation a la valorisation digitale et au contenu web en contexte sportif.</p>
@@ -112,37 +112,37 @@
         </div>
       </section>
 
-      <section id="competences" class="wrapper section reveal">
+      <section id="competences" class="shell block reveal">
         <div class="section-head">
           <h2 data-i18n="skillsTitle">Competences</h2>
         </div>
-        <div class="card-grid three">
-          <article class="card reveal">
+        <div class="grid-3">
+          <article class="panel card reveal">
             <h3 data-i18n="skillsCol1Title">Front-end</h3>
             <p data-i18n="skillsCol1List">HTML5, CSS3, JavaScript, Responsive Design</p>
           </article>
-          <article class="card reveal">
+          <article class="panel card reveal">
             <h3 data-i18n="skillsCol2Title">Outils</h3>
             <p data-i18n="skillsCol2List">Git, GitHub, GitHub Pages, VS Code, Figma</p>
           </article>
-          <article class="card reveal">
+          <article class="panel card reveal">
             <h3 data-i18n="skillsCol3Title">Methodes</h3>
             <p data-i18n="skillsCol3List">UX thinking, performance web, iteration rapide</p>
           </article>
         </div>
       </section>
 
-      <section id="formation" class="wrapper section reveal">
+      <section id="formation" class="shell block reveal">
         <div class="section-head">
           <h2 data-i18n="educationTitle">Formation</h2>
         </div>
-        <div class="timeline">
-          <article class="timeline-item reveal">
+        <div class="grid-2">
+          <article class="panel card reveal">
             <h3 data-i18n="edu1Title">Lycee Fulbert</h3>
             <p class="meta" data-i18n="edu1Meta">Reference publique LinkedIn</p>
             <p data-i18n="edu1Desc">Parcours scolaire axe sur la progression technique et la structuration de projets.</p>
           </article>
-          <article class="timeline-item reveal">
+          <article class="panel card reveal">
             <h3 data-i18n="edu2Title">Autoformation continue</h3>
             <p class="meta" data-i18n="edu2Meta">Web, UX et outils modernes</p>
             <p data-i18n="edu2Desc">Veille active autour du front-end, de l'accessibilite et de l'optimisation.</p>
@@ -150,32 +150,32 @@
         </div>
       </section>
 
-      <section id="projects" class="wrapper section reveal">
+      <section id="projects" class="shell block reveal">
         <div class="section-head">
           <h2 data-i18n="projectsTitle">Projets selectionnes</h2>
         </div>
-        <div class="card-grid two">
-          <article class="card reveal">
+        <div class="grid-2">
+          <article class="panel card reveal">
             <h3>FC Fulbert</h3>
             <p data-i18n="p1Desc">Site vitrine sportif avec navigation mobile fluide.</p>
           </article>
-          <article class="card reveal">
+          <article class="panel card reveal">
             <h3>Alpha Service</h3>
             <p data-i18n="p2Desc">Site corporate orientee conversion et prise de contact.</p>
           </article>
-          <article class="card reveal">
+          <article class="panel card reveal">
             <h3>YourNextCar</h3>
             <p data-i18n="p3Desc">Plateforme auto avec structure claire et consultation rapide.</p>
           </article>
-          <article class="card reveal">
+          <article class="panel card reveal">
             <h3>Cluedo</h3>
             <p data-i18n="p4Desc">Projet interactif JavaScript autour du jeu Cluedo.</p>
           </article>
         </div>
       </section>
 
-      <section id="contact" class="wrapper section reveal">
-        <div class="contact-box">
+      <section id="contact" class="shell block reveal">
+        <div class="contact panel">
           <div>
             <h2 data-i18n="contactTitle">Contact</h2>
             <p data-i18n="contactText">Vous avez un projet ou une opportunite ? Parlons-en.</p>
@@ -189,7 +189,7 @@
       </section>
     </main>
 
-    <footer class="footer wrapper">
+    <footer class="shell footer">
       <p>(c) <span id="year"></span> Ilies Benali</p>
     </footer>
 
