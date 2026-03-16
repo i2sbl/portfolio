@@ -129,8 +129,9 @@ a { color: inherit; }
   position: relative;
   width: 100%;
   max-width: 220px;
-  aspect-ratio: 1 / 1;
+  height: 220px;       /* explicit height — aspect-ratio unreliable in flex column */
   margin: 0.25rem auto 0;
+  overflow: hidden;    /* contain orbit icons, prevent layout disruption */
 }
 
 /* Circular avatar — centered inside container */
@@ -177,30 +178,33 @@ a { color: inherit; }
 .orbit-icon img {
   width: 20px;
   height: 20px;
+  max-width: 20px;      /* constrain SVG natural size */
+  max-height: 20px;
   object-fit: contain;
   pointer-events: none;
+  display: block;
 }
 
-/* Fallback CSS orbits (JS overrides at runtime) */
+/* Fallback CSS orbits (JS overrides at runtime) — radius 82px < 110px half-container */
 @keyframes orbit1 {
-  from { transform: rotate(0deg)   translateX(88px) rotate(0deg); }
-  to   { transform: rotate(360deg) translateX(88px) rotate(-360deg); }
+  from { transform: rotate(0deg)   translateX(82px) rotate(0deg); }
+  to   { transform: rotate(360deg) translateX(82px) rotate(-360deg); }
 }
 @keyframes orbit2 {
-  from { transform: rotate(72deg)  translateX(88px) rotate(-72deg); }
-  to   { transform: rotate(432deg) translateX(88px) rotate(-432deg); }
+  from { transform: rotate(72deg)  translateX(82px) rotate(-72deg); }
+  to   { transform: rotate(432deg) translateX(82px) rotate(-432deg); }
 }
 @keyframes orbit3 {
-  from { transform: rotate(144deg) translateX(88px) rotate(-144deg); }
-  to   { transform: rotate(504deg) translateX(88px) rotate(-504deg); }
+  from { transform: rotate(144deg) translateX(82px) rotate(-144deg); }
+  to   { transform: rotate(504deg) translateX(82px) rotate(-504deg); }
 }
 @keyframes orbit4 {
-  from { transform: rotate(216deg) translateX(88px) rotate(-216deg); }
-  to   { transform: rotate(576deg) translateX(88px) rotate(-576deg); }
+  from { transform: rotate(216deg) translateX(82px) rotate(-216deg); }
+  to   { transform: rotate(576deg) translateX(82px) rotate(-576deg); }
 }
 @keyframes orbit5 {
-  from { transform: rotate(288deg) translateX(88px) rotate(-288deg); }
-  to   { transform: rotate(648deg) translateX(88px) rotate(-648deg); }
+  from { transform: rotate(288deg) translateX(82px) rotate(-288deg); }
+  to   { transform: rotate(648deg) translateX(82px) rotate(-648deg); }
 }
 
 .orbit-icon-1 { animation: orbit1 32s linear infinite; }

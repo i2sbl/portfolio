@@ -245,14 +245,15 @@ applyTranslations(currentLang);
 /* ── Orbit icons — randomized keyframes per page load ──────
    Inspired by corentin1876.github.io/Corentin-Etienne/
    Each icon gets a unique animation name injected in <style>,
-   varying radius (82–96px), duration (28–46s) and direction. */
+   varying radius (76–88px, max extent 106px < 110px half-container),
+   duration (28–46s) and direction. */
 document.querySelectorAll(".orbit-icon").forEach((icon, i) => {
   const duration   = 28 + Math.random() * 18;          // 28–46s
   const reverse    = Math.random() > 0.5;
   const startAngle = Math.random() * 360;
   const ts         = Date.now();
   const name       = `orb-${i}-${ts}`;
-  const r          = () => 82 + Math.random() * 14;    // 82–96px
+  const r          = () => 76 + Math.random() * 12;    // 76–88px
 
   const r0 = r(), r1 = r(), r2 = r(), r3 = r();
   const a  = (n) => (startAngle + n * 90).toFixed(1);
