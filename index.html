@@ -4,212 +4,173 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Ilies Benali | Portfolio</title>
-    <meta name="description" content="Portfolio de Ilies Benali - etudiant developpeur web." />
+    <meta name="description" content="Portfolio premium de Ilies Benali." />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;700&family=Syne:wght@500;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Epilogue:wght@400;500;700;800&family=Space+Grotesk:wght@500;700&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <div class="aurora" aria-hidden="true"></div>
+    <div class="bg-layer" aria-hidden="true"></div>
 
-    <header class="site-header">
-      <div class="shell header-inner">
+    <div class="layout shell">
+      <aside class="sidebar panel reveal" id="home">
         <a class="brand" href="#home">IB</a>
-        <nav class="nav">
-          <a href="#about" data-i18n="navAbout">A propos</a>
-          <a href="#experience" data-i18n="navExperience">Experience</a>
-          <a href="#competences" data-i18n="navSkills">Competences</a>
-          <a href="#formation" data-i18n="navEducation">Formation</a>
-          <a href="#projects" data-i18n="navProjects">Projets</a>
-          <a href="#contact" data-i18n="navContact">Contact</a>
-        </nav>
-        <div class="header-actions">
+        <img src="photo.png" alt="Photo de Ilies Benali" class="avatar" />
+        <h1 data-i18n="heroTitle">Ilies Benali</h1>
+        <p class="subtitle" data-i18n="heroLine">Etudiant | Developpeur web</p>
+        <p class="intro" data-i18n="heroSubtitle">
+          Je construis des experiences web nettes, rapides et orientees resultat.
+        </p>
+
+        <div class="quick-facts">
+          <p><span data-i18n="statLabel1">Localisation</span> <strong data-i18n="statValue1">Chartres, France</strong></p>
+          <p><span data-i18n="statLabel2">Focus</span> <strong data-i18n="statValue2">Front-end & UX</strong></p>
+          <p><span data-i18n="statLabel3">Stack</span> <strong>HTML, CSS, JavaScript</strong></p>
+        </div>
+
+        <div class="sidebar-actions">
           <button id="themeToggle" class="control" aria-label="Switch theme">Theme sombre</button>
           <button id="langToggle" class="control" aria-label="Switch language">EN</button>
         </div>
-      </div>
-    </header>
+      </aside>
 
-    <main>
-      <section id="home" class="hero shell reveal">
-        <div class="hero-content panel">
-          <p class="eyebrow" data-i18n="eyebrow">Portfolio 2026</p>
-          <h1 data-i18n="heroTitle">Ilies Benali</h1>
-          <p class="hero-line" data-i18n="heroLine">Etudiant | Developpeur web</p>
-          <p class="hero-subtitle" data-i18n="heroSubtitle">
-            Je construis des experiences web nettes, rapides et orientees resultat.
-          </p>
-          <div class="hero-cta">
-            <a class="btn btn-primary" href="#projects" data-i18n="ctaProjects">Voir mes projets</a>
-            <a class="btn btn-ghost" href="#contact" data-i18n="navContact">Contact</a>
-          </div>
-        </div>
+      <main class="content">
+        <header class="top-nav panel reveal">
+          <nav class="nav">
+            <a href="#about" data-i18n="navAbout">A propos</a>
+            <a href="#experience" data-i18n="navExperience">Experience</a>
+            <a href="#competences" data-i18n="navSkills">Competences</a>
+            <a href="#formation" data-i18n="navEducation">Formation</a>
+            <a href="#projects" data-i18n="navProjects">Projets</a>
+            <a href="#contact" data-i18n="navContact">Contact</a>
+          </nav>
+        </header>
 
-        <aside class="hero-side panel">
-          <img src="photo.png" alt="Photo de Ilies Benali" />
-          <ul class="facts">
-            <li>
-              <span data-i18n="statLabel1">Localisation</span>
-              <strong data-i18n="statValue1">Chartres, France</strong>
-            </li>
-            <li>
-              <span data-i18n="statLabel2">Focus</span>
-              <strong data-i18n="statValue2">Front-end & UX</strong>
-            </li>
-            <li>
-              <span data-i18n="statLabel3">Stack</span>
-              <strong>HTML, CSS, JavaScript</strong>
-            </li>
-          </ul>
-        </aside>
-      </section>
-
-      <section id="about" class="shell block reveal">
-        <div class="section-head">
+        <section id="about" class="panel section reveal">
           <h2 data-i18n="aboutTitle">A propos</h2>
-        </div>
-        <div class="two-col">
-          <article class="panel">
-            <p class="lead" data-i18n="aboutQuick">
-              Etudiant developpeur web base a Chartres, je transforme des idees metier en interfaces claires et efficaces.
-            </p>
-          </article>
-          <article class="panel">
-            <p data-i18n="aboutText">
-              Mon approche combine design utile, execution rapide et attention au detail. Je privilegie des experiences fluides, des performances solides et une communication visuelle claire.
-            </p>
-          </article>
-        </div>
-      </section>
-
-      <section id="experience" class="shell block reveal">
-        <div class="section-head">
-          <h2 data-i18n="experienceTitle">Experience</h2>
-          <p class="section-note" data-i18n="linkedinSource">
-            Contenu adapte d'apres les informations publiques de ton profil LinkedIn.
+          <p class="lead" data-i18n="aboutQuick">
+            Etudiant developpeur web base a Chartres, je transforme des idees metier en interfaces claires et efficaces.
           </p>
-        </div>
-        <div class="timeline">
-          <article class="timeline-item panel reveal">
-            <p class="meta-row">
-              <span class="meta" data-i18n="exp1Meta">Stagiaire | Groupe Covea</span>
-              <span class="period" data-i18n="exp1Period">Janvier - Fevrier 2026</span>
-            </p>
-            <h3 data-i18n="exp1Title">Stagiaire</h3>
-            <p data-i18n="exp1Desc">Stage realise a Chartres avec contribution aux activites professionnelles de l'equipe.</p>
-          </article>
-          <article class="timeline-item panel reveal">
-            <p class="meta-row">
-              <span class="meta" data-i18n="exp2Meta">Stagiaire | Your Next Car</span>
-              <span class="period" data-i18n="exp2Period">Mai - Juin 2025</span>
-            </p>
-            <h3 data-i18n="exp2Title">Stagiaire</h3>
-            <p data-i18n="exp2Desc">Stage a Champhol axe sur la mise en place et l'amelioration d'elements web.</p>
-          </article>
-          <article class="timeline-item panel reveal">
-            <p class="meta-row">
-              <span class="meta" data-i18n="exp3Meta">Administrateur du reseau | Alpha Service</span>
-              <span class="period" data-i18n="exp3Period">Juillet - Septembre 2024</span>
-            </p>
-            <h3 data-i18n="exp3Title">Administrateur du reseau</h3>
-            <p data-i18n="exp3Desc">Mission a Mainvilliers orientee administration reseau et support technique.</p>
-          </article>
-        </div>
-      </section>
+          <p data-i18n="aboutText">
+            Mon approche combine design utile, execution rapide et attention au detail. Je privilegie des experiences fluides, des performances solides et une communication visuelle claire.
+          </p>
+        </section>
 
-      <section id="competences" class="shell block reveal">
-        <div class="section-head">
-          <h2 data-i18n="skillsTitle">Competences</h2>
-        </div>
-        <div class="panel skills-cloud reveal">
-          <span class="skill-pill">UX</span>
-          <span class="skill-pill">UI</span>
-          <span class="skill-pill">CSS</span>
-          <span class="skill-pill">PHP</span>
-          <span class="skill-pill">HTML</span>
-          <span class="skill-pill">Power BI</span>
-          <span class="skill-pill">Metrologie</span>
-          <span class="skill-pill">Analyse des donnees</span>
-          <span class="skill-pill">Scrum</span>
-          <span class="skill-pill">Methode agile</span>
-          <span class="skill-pill">JavaScript</span>
-          <span class="skill-pill">IA</span>
-          <span class="skill-pill">Marketing digital</span>
-          <span class="skill-pill">Conception de sites web</span>
-          <span class="skill-pill">Reseaux sociaux</span>
-          <span class="skill-pill">Reseau prive virtuel</span>
-          <span class="skill-pill">Administration du reseau</span>
-          <span class="skill-pill">Marketing sur les reseaux sociaux</span>
-          <span class="skill-pill">Administration de bases de donnees</span>
-          <span class="skill-pill">Conception de bases de donnees</span>
-          <span class="skill-pill">Creation de support de prospection</span>
-        </div>
-      </section>
-
-      <section id="formation" class="shell block reveal">
-        <div class="section-head">
-          <h2 data-i18n="educationTitle">Formation</h2>
-        </div>
-        <div class="grid-2">
-          <article class="panel card reveal">
-            <h3 data-i18n="edu1Title">Lycee Fulbert</h3>
-            <p class="meta" data-i18n="edu1Meta">BTS SIO SLAM | 2024 - 2026</p>
-            <p data-i18n="edu1Desc">Chartres</p>
-          </article>
-          <article class="panel card reveal">
-            <h3 data-i18n="edu2Title">Lycee Marceau</h3>
-            <p class="meta" data-i18n="edu2Meta">Baccalaureat general | AMC et Mathematiques | 2021 - 2024</p>
-            <p data-i18n="edu2Desc">Chartres</p>
-          </article>
-        </div>
-      </section>
-
-      <section id="projects" class="shell block reveal">
-        <div class="section-head">
-          <h2 data-i18n="projectsTitle">Projets selectionnes</h2>
-        </div>
-        <div class="grid-2">
-          <article class="panel card reveal">
-            <h3>FC Fulbert</h3>
-            <p data-i18n="p1Desc">Site vitrine sportif avec navigation mobile fluide.</p>
-          </article>
-          <article class="panel card reveal">
-            <h3>Alpha Service</h3>
-            <p data-i18n="p2Desc">Site corporate orientee conversion et prise de contact.</p>
-          </article>
-          <article class="panel card reveal">
-            <h3>YourNextCar</h3>
-            <p data-i18n="p3Desc">Plateforme auto avec structure claire et consultation rapide.</p>
-          </article>
-          <article class="panel card reveal">
-            <h3>Cluedo</h3>
-            <p data-i18n="p4Desc">Projet interactif JavaScript autour du jeu Cluedo.</p>
-          </article>
-        </div>
-      </section>
-
-      <section id="contact" class="shell block reveal">
-        <div class="contact panel">
-          <div>
-            <h2 data-i18n="contactTitle">Contact</h2>
-            <p data-i18n="contactText">Vous avez un projet ou une opportunite ? Parlons-en.</p>
+        <section id="experience" class="panel section reveal">
+          <h2>Experience professionnelle</h2>
+          <p class="section-note">De la plus recente a la plus ancienne</p>
+          <div class="timeline">
+            <article class="item reveal">
+              <div class="item-top">
+                <h3>Stagiaire</h3>
+                <span>Janvier - Fevrier 2026</span>
+              </div>
+              <p class="item-meta">Groupe Covea | Chartres</p>
+              <p>Contribution aux activites professionnelles de l'equipe pendant la periode de stage.</p>
+            </article>
+            <article class="item reveal">
+              <div class="item-top">
+                <h3>Stagiaire</h3>
+                <span>Mai - Juin 2025</span>
+              </div>
+              <p class="item-meta">Your Next Car | Champhol</p>
+              <p>Mise en place et amelioration d'elements web dans un contexte operationnel.</p>
+            </article>
+            <article class="item reveal">
+              <div class="item-top">
+                <h3>Administrateur du reseau</h3>
+                <span>Juillet - Septembre 2024</span>
+              </div>
+              <p class="item-meta">Alpha Service | Mainvilliers</p>
+              <p>Administration reseau et support technique sur des besoins terrain.</p>
+            </article>
           </div>
+        </section>
+
+        <section id="competences" class="panel section reveal">
+          <h2>Competences LinkedIn</h2>
+          <div class="skills-list">
+            <span>UX</span>
+            <span>UI</span>
+            <span>CSS</span>
+            <span>PHP</span>
+            <span>HTML</span>
+            <span>Power BI</span>
+            <span>Metrologie</span>
+            <span>Analyse des donnees</span>
+            <span>Scrum</span>
+            <span>Methode agile</span>
+            <span>JavaScript</span>
+            <span>IA</span>
+            <span>Marketing digital</span>
+            <span>Conception de sites web</span>
+            <span>Reseaux sociaux</span>
+            <span>Reseau prive virtuel</span>
+            <span>Administration du reseau</span>
+            <span>Marketing sur les reseaux sociaux</span>
+            <span>Administration de bases de donnees</span>
+            <span>Conception de bases de donnees</span>
+            <span>Creation de support de prospection</span>
+          </div>
+        </section>
+
+        <section id="formation" class="panel section reveal">
+          <h2>Formation</h2>
+          <div class="education-grid">
+            <article class="edu-card reveal">
+              <h3>Lycee Fulbert</h3>
+              <p class="item-meta">BTS SIO SLAM</p>
+              <p>2024 - 2026 | Chartres</p>
+            </article>
+            <article class="edu-card reveal">
+              <h3>Lycee Marceau</h3>
+              <p class="item-meta">Baccalaureat general (AMC + Mathematiques)</p>
+              <p>2021 - 2024 | Chartres</p>
+            </article>
+          </div>
+        </section>
+
+        <section id="projects" class="panel section reveal">
+          <h2 data-i18n="projectsTitle">Projets selectionnes</h2>
+          <div class="project-grid">
+            <article class="project-card reveal">
+              <h3>FC Fulbert</h3>
+              <p data-i18n="p1Desc">Site vitrine sportif avec navigation mobile fluide.</p>
+            </article>
+            <article class="project-card reveal">
+              <h3>Alpha Service</h3>
+              <p data-i18n="p2Desc">Site corporate orientee conversion et prise de contact.</p>
+            </article>
+            <article class="project-card reveal">
+              <h3>YourNextCar</h3>
+              <p data-i18n="p3Desc">Plateforme auto avec structure claire et consultation rapide.</p>
+            </article>
+            <article class="project-card reveal">
+              <h3>Cluedo</h3>
+              <p data-i18n="p4Desc">Projet interactif JavaScript autour du jeu Cluedo.</p>
+            </article>
+          </div>
+        </section>
+
+        <section id="contact" class="panel section reveal">
+          <h2 data-i18n="contactTitle">Contact</h2>
+          <p data-i18n="contactText">Vous avez un projet ou une opportunite ? Parlons-en.</p>
           <div class="contact-links">
             <a href="mailto:ilies.benali28@gmail.com">ilies.benali28@gmail.com</a>
             <a href="https://github.com/i2sbl" target="_blank" rel="noreferrer">GitHub</a>
             <a href="https://www.linkedin.com/in/ilies-benali/" target="_blank" rel="noreferrer">LinkedIn</a>
           </div>
-        </div>
-      </section>
-    </main>
+        </section>
 
-    <footer class="shell footer">
-      <p>(c) <span id="year"></span> Ilies Benali</p>
-    </footer>
+        <footer class="footer">
+          <p>(c) <span id="year"></span> Ilies Benali</p>
+        </footer>
+      </main>
+    </div>
 
     <script src="script.js"></script>
   </body>
