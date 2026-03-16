@@ -8,7 +8,7 @@ const translations = {
     navContact: "Contact",
     eyebrow: "Portfolio 2026",
     heroTitle: "Ilies Benali",
-    heroLine: "Etudiant | Developpeur web",
+    heroLine: "Etudiant · Developpeur web",
     heroSubtitle:
       "Je construis des experiences web nettes, rapides et orientees resultat.",
     statLabel1: "Localisation",
@@ -22,7 +22,7 @@ const translations = {
       "Etudiant developpeur web base a Chartres, je transforme des idees metier en interfaces claires et efficaces.",
     aboutText:
       "Mon approche combine design utile, execution rapide et attention au detail. Je privilegie des experiences fluides, des performances solides et une communication visuelle claire.",
-    experienceTitle: "Experience",
+    experienceTitle: "Experience professionnelle",
     linkedinSource:
       "Experiences affichees de la plus recente a la plus ancienne.",
     exp1Title: "Stagiaire",
@@ -41,11 +41,11 @@ const translations = {
     exp3Desc:
       "Mission a Mainvilliers orientee administration reseau et support technique.",
     skillsTitle: "Competences",
-    skillsCol1Title: "Front-end",
+    skillsCol1Title: "Developpement",
     skillsCol1List: "HTML5, CSS3, JavaScript, Responsive Design",
-    skillsCol2Title: "Outils",
+    skillsCol2Title: "Infrastructure & Data",
     skillsCol2List: "Git, GitHub, GitHub Pages, VS Code, Figma",
-    skillsCol3Title: "Methodes",
+    skillsCol3Title: "Methodes & Transversal",
     skillsCol3List: "UX thinking, performance web, iteration rapide",
     educationTitle: "Formation",
     edu1Title: "Lycee Fulbert",
@@ -79,7 +79,7 @@ const translations = {
     navContact: "Contact",
     eyebrow: "Portfolio 2026",
     heroTitle: "Ilies Benali",
-    heroLine: "Student | Web Developer",
+    heroLine: "Student · Web Developer",
     heroSubtitle:
       "I build clean, fast web experiences with a clear result-driven mindset.",
     statLabel1: "Location",
@@ -93,7 +93,7 @@ const translations = {
       "Student web developer based in Chartres, turning business ideas into clear and efficient interfaces.",
     aboutText:
       "My approach combines useful design, fast execution, and attention to detail. I prioritize smooth experiences, solid performance, and clear visual communication.",
-    experienceTitle: "Experience",
+    experienceTitle: "Professional Experience",
     linkedinSource:
       "Experiences displayed from most recent to oldest.",
     exp1Title: "Intern",
@@ -112,11 +112,11 @@ const translations = {
     exp3Desc:
       "Assignment in Mainvilliers focused on network administration and technical support.",
     skillsTitle: "Skills",
-    skillsCol1Title: "Front-end",
+    skillsCol1Title: "Development",
     skillsCol1List: "HTML5, CSS3, JavaScript, Responsive Design",
-    skillsCol2Title: "Tooling",
+    skillsCol2Title: "Infrastructure & Data",
     skillsCol2List: "Git, GitHub, GitHub Pages, VS Code, Figma",
-    skillsCol3Title: "Methods",
+    skillsCol3Title: "Methods & Cross-functional",
     skillsCol3List: "UX thinking, web performance, fast iteration",
     educationTitle: "Education",
     edu1Title: "Lycee Fulbert",
@@ -143,7 +143,7 @@ const translations = {
   }
 };
 
-const designVersion = "v6";
+const designVersion = "v7";
 if (localStorage.getItem("portfolio-design-version") !== designVersion) {
   localStorage.setItem("portfolio-design-version", designVersion);
   localStorage.setItem("portfolio-theme", "light");
