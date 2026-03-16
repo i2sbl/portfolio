@@ -143,7 +143,7 @@ const translations = {
   }
 };
 
-const designVersion = "v7";
+const designVersion = "v8";
 if (localStorage.getItem("portfolio-design-version") !== designVersion) {
   localStorage.setItem("portfolio-design-version", designVersion);
   localStorage.setItem("portfolio-theme", "light");
