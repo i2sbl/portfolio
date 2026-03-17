@@ -1,45 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:xhtml="http://www.w3.org/1999/xhtml"
-        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
-
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://iliesbenali.com/</loc>
     <lastmod>2026-03-17</lastmod>
-    <changefreq>monthly</changefreq>
+    <changefreq>weekly</changefreq>
     <priority>1.0</priority>
-
-    <!-- hreflang FR / EN -->
-    <xhtml:link rel="alternate" hreflang="fr" href="https://iliesbenali.com/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://iliesbenali.com/" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://iliesbenali.com/" />
-
-    <!-- Images — indexation Google Images -->
-    <image:image>
-      <image:loc>https://iliesbenali.com/og-image.png</image:loc>
-      <image:title>Ilies Benali – Développeur Web Front-End, Chartres</image:title>
-      <image:caption>Portfolio 2026 d'Ilies Benali, étudiant développeur web front-end basé à Chartres.</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://iliesbenali.com/photo.png</image:loc>
-      <image:title>Photo d'Ilies Benali – Développeur Web Front-End</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://iliesbenali.com/img/fc-fulbert.png</image:loc>
-      <image:title>FC Fulbert – Site vitrine sportif HTML CSS JavaScript SEO</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://iliesbenali.com/img/yournextcar.png</image:loc>
-      <image:title>YourNextCar – Plateforme automobile développée par Ilies Benali</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://iliesbenali.com/img/alpha-service.png</image:loc>
-      <image:title>Alpha Service – Site corporate HTML CSS JavaScript</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://iliesbenali.com/img/cluedo.png</image:loc>
-      <image:title>Cluedo – Jeu interactif JavaScript par Ilies Benali</image:title>
-    </image:image>
   </url>
-
 </urlset>
