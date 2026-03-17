@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://iliesbenali.com/sitemap.xml
+
+# Bloquer les fichiers inutiles pour les moteurs
+Disallow: /img/
