@@ -52,33 +52,53 @@
           "@type": "Person",
           "@id": "https://iliesbenali.com/#person",
           "name": "Ilies Benali",
+          "givenName": "Ilies",
+          "familyName": "Benali",
           "jobTitle": "Développeur Web Front-End",
           "description": "Étudiant en BTS SIO SLAM, développeur web front-end spécialisé en HTML, CSS, JavaScript et PHP, basé à Chartres, France.",
           "url": "https://iliesbenali.com/",
-          "image": "https://iliesbenali.com/og-image.png",
+          "image": {
+            "@type": "ImageObject",
+            "url": "https://iliesbenali.com/photo.png",
+            "width": 400,
+            "height": 400
+          },
           "email": "ilies.benali28@gmail.com",
           "address": {
             "@type": "PostalAddress",
             "addressLocality": "Chartres",
             "addressRegion": "Eure-et-Loir",
+            "postalCode": "28000",
             "addressCountry": "FR"
           },
           "sameAs": [
             "https://github.com/i2sbl",
             "https://www.linkedin.com/in/ilies-benali/"
           ],
-          "knowsAbout": ["HTML", "CSS", "JavaScript", "PHP", "Git", "GitHub", "SEO", "UX/UI", "Responsive Design"],
+          "knowsAbout": ["HTML", "CSS", "JavaScript", "PHP", "Git", "GitHub", "SEO", "UX/UI", "Responsive Design", "Intégration web"],
+          "hasOccupation": {
+            "@type": "Occupation",
+            "name": "Développeur Web Front-End",
+            "occupationLocation": { "@type": "City", "name": "Chartres" }
+          },
           "alumniOf": {
             "@type": "EducationalOrganization",
             "name": "BTS SIO SLAM",
-            "sameAs": "https://schema.org/CollegeOrUniversity"
-          }
+            "address": { "@type": "PostalAddress", "addressLocality": "Chartres", "addressCountry": "FR" }
+          },
+          "worksFor": [
+            {
+              "@type": "Organization",
+              "name": "Groupe Covea",
+              "address": { "@type": "PostalAddress", "addressLocality": "Chartres", "addressCountry": "FR" }
+            }
+          ]
         },
         {
           "@type": "WebSite",
           "@id": "https://iliesbenali.com/#website",
           "url": "https://iliesbenali.com/",
-          "name": "Ilies Benali – Portfolio Développeur Web",
+          "name": "Ilies Benali – Portfolio Développeur Web Front-End",
           "description": "Portfolio professionnel d'Ilies Benali, développeur web front-end basé à Chartres.",
           "inLanguage": ["fr-FR", "en-US"],
           "author": { "@id": "https://iliesbenali.com/#person" },
@@ -87,6 +107,119 @@
             "target": "https://iliesbenali.com/?s={search_term_string}",
             "query-input": "required name=search_term_string"
           }
+        },
+        {
+          "@type": "ProfilePage",
+          "@id": "https://iliesbenali.com/#profilepage",
+          "mainEntity": { "@id": "https://iliesbenali.com/#person" },
+          "url": "https://iliesbenali.com/",
+          "name": "Portfolio d'Ilies Benali – Développeur Web Front-End",
+          "datePublished": "2025-01-01",
+          "dateModified": "2026-03-17"
+        },
+        {
+          "@type": "BreadcrumbList",
+          "@id": "https://iliesbenali.com/#breadcrumb",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://iliesbenali.com/" },
+            { "@type": "ListItem", "position": 2, "name": "Projets", "item": "https://iliesbenali.com/#projets" },
+            { "@type": "ListItem", "position": 3, "name": "À propos", "item": "https://iliesbenali.com/#about" },
+            { "@type": "ListItem", "position": 4, "name": "Expérience", "item": "https://iliesbenali.com/#experience" },
+            { "@type": "ListItem", "position": 5, "name": "Contact", "item": "https://iliesbenali.com/#contact" }
+          ]
+        },
+        {
+          "@type": "ItemList",
+          "@id": "https://iliesbenali.com/#projects",
+          "name": "Projets de développement web — Ilies Benali",
+          "description": "Sélection de projets web réalisés par Ilies Benali, étudiant développeur front-end à Chartres.",
+          "creator": { "@id": "https://iliesbenali.com/#person" },
+          "itemListElement": [
+            {
+              "@type": "ListItem", "position": 1,
+              "item": {
+                "@type": "CreativeWork",
+                "name": "FC Fulbert",
+                "description": "Site vitrine sportif avec navigation mobile fluide et référencement naturel (SEO) optimisé.",
+                "url": "https://fc-fulbert.netlify.app/",
+                "author": { "@id": "https://iliesbenali.com/#person" },
+                "keywords": "HTML, CSS, JavaScript, SEO, site vitrine sportif",
+                "image": "https://iliesbenali.com/img/fc-fulbert.png"
+              }
+            },
+            {
+              "@type": "ListItem", "position": 2,
+              "item": {
+                "@type": "CreativeWork",
+                "name": "YourNextCar",
+                "description": "Plateforme de vente automobile avec structure claire et consultation rapide.",
+                "author": { "@id": "https://iliesbenali.com/#person" },
+                "keywords": "HTML, CSS, JavaScript, plateforme automobile",
+                "image": "https://iliesbenali.com/img/yournextcar.png"
+              }
+            },
+            {
+              "@type": "ListItem", "position": 3,
+              "item": {
+                "@type": "CreativeWork",
+                "name": "Alpha Service",
+                "description": "Site corporate orienté conversion et prise de contact client.",
+                "author": { "@id": "https://iliesbenali.com/#person" },
+                "keywords": "HTML, CSS, JavaScript, site corporate, landing page",
+                "image": "https://iliesbenali.com/img/alpha-service.png"
+              }
+            },
+            {
+              "@type": "ListItem", "position": 4,
+              "item": {
+                "@type": "CreativeWork",
+                "name": "Cluedo",
+                "description": "Jeu interactif Cluedo développé en JavaScript pur avec logique de jeu complète.",
+                "url": "https://github.com/i2sbl/Cluedo-Ilies",
+                "author": { "@id": "https://iliesbenali.com/#person" },
+                "keywords": "JavaScript, DOM, jeu interactif, logique de jeu",
+                "image": "https://iliesbenali.com/img/cluedo.png"
+              }
+            }
+          ]
+        },
+        {
+          "@type": "FAQPage",
+          "@id": "https://iliesbenali.com/#faq",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "Qui est Ilies Benali ?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Ilies Benali est un étudiant développeur web front-end basé à Chartres, actuellement en BTS SIO SLAM. Spécialisé en HTML, CSS, JavaScript et PHP, il conçoit des interfaces web modernes et performantes."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Quelles sont les compétences de développement web d'Ilies Benali ?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Ilies Benali maîtrise HTML5, CSS3, JavaScript ES6+, PHP, Git et GitHub. Il applique les bonnes pratiques UX/UI, le responsive design et l'optimisation SEO."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Ilies Benali est-il disponible pour un stage ou une alternance ?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Oui, Ilies Benali est disponible pour des stages et alternances en développement web front-end. Contactez-le à ilies.benali28@gmail.com ou via LinkedIn."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Où se situe Ilies Benali ?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Ilies Benali est basé à Chartres (Eure-et-Loir, France 28). Il est mobile en région Centre-Val de Loire et Île-de-France."
+              }
+            }
+          ]
         }
       ]
     }
@@ -96,6 +229,34 @@
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
     <meta name="msapplication-TileColor" content="#0d0d0f" />
+
+    <!-- ══ Performance & compatibilité navigateurs ════════════════════ -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="MobileOptimized" content="320" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="revisit-after" content="7 days" />
+    <meta name="rating" content="general" />
+    <meta name="distribution" content="global" />
+
+    <!-- ══ hreflang — indique le bilinguisme à Google ════════════════ -->
+    <link rel="alternate" hreflang="fr" href="https://iliesbenali.com/" />
+    <link rel="alternate" hreflang="en" href="https://iliesbenali.com/" />
+    <link rel="alternate" hreflang="x-default" href="https://iliesbenali.com/" />
+
+    <!-- ══ rel="me" — vérifie l'identité (E-E-A-T) ════════════════════ -->
+    <link rel="me" href="https://github.com/i2sbl" />
+    <link rel="me" href="https://www.linkedin.com/in/ilies-benali/" />
+    <link rel="me" href="mailto:ilies.benali28@gmail.com" />
+
+    <!-- ══ DNS Prefetch — réduit la latence des ressources tierces ════ -->
+    <link rel="dns-prefetch" href="//fonts.googleapis.com" />
+    <link rel="dns-prefetch" href="//fonts.gstatic.com" />
+    <link rel="dns-prefetch" href="//cdn.jsdelivr.net" />
+
+    <!-- ══ Preload — ressources critiques du dessus de page ══════════ -->
+    <link rel="preload" href="styles.css" as="style" />
+    <link rel="preload" href="photo.png" as="image" fetchpriority="high" />
 
     <!-- ══ Polices ════════════════════════════════════════════════════ -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -139,11 +300,13 @@
     </header>
     <button id="navOverlay" class="nav-overlay" type="button" aria-label="Fermer le menu"></button>
 
+    <main id="content" role="main">
+
     <!-- ── Hero ───────────────────────────────────────────── -->
     <section id="hero" class="hero">
       <div class="hero-visual reveal">
         <div class="profile-container">
-          <img src="photo.png" alt="Photo de Ilies Benali" class="avatar" />
+          <img src="photo.png" alt="Ilies Benali – Développeur Web Front-End à Chartres" class="avatar" width="200" height="200" fetchpriority="high" />
           <div class="orbit-icon orbit-icon-1"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" alt="HTML5" /></div>
           <div class="orbit-icon orbit-icon-2"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg" alt="CSS3" /></div>
           <div class="orbit-icon orbit-icon-3"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" alt="JavaScript" /></div>
@@ -154,7 +317,7 @@
 
       <div class="hero-text reveal">
         <p class="eyebrow" data-i18n="eyebrow">Portfolio 2026</p>
-        <h1 data-i18n="heroTitle">Ilies Benali</h1>
+        <h1 itemprop="name" data-i18n="heroTitle">Ilies Benali</h1>
         <p class="hero-line" data-i18n="heroLine">Etudiant · Developpeur web</p>
         <p class="hero-sub" data-i18n="heroSubtitle">Je construis des experiences web nettes, rapides et orientees resultat.</p>
         <a href="#projets" class="cta-btn" data-i18n="ctaProjects">Voir mes projets</a>
@@ -169,7 +332,7 @@
 
       <article class="project-item reveal">
         <div class="project-visual">
-          <img src="img/fc-fulbert.png" alt="Apercu FC Fulbert" onerror="this.parentElement.classList.add('img-missing')" />
+          <img src="img/fc-fulbert.png" alt="FC Fulbert – site vitrine sportif HTML CSS JS SEO" loading="lazy" width="600" height="400" onerror="this.parentElement.classList.add('img-missing')" />
         </div>
         <div class="project-info">
           <span class="project-num">01</span>
@@ -184,7 +347,7 @@
 
       <article class="project-item reveal">
         <div class="project-visual">
-          <img src="img/yournextcar.png" alt="Apercu YourNextCar" onerror="this.parentElement.classList.add('img-missing')" />
+          <img src="img/yournextcar.png" alt="YourNextCar – plateforme automobile développée par Ilies Benali" loading="lazy" width="600" height="400" onerror="this.parentElement.classList.add('img-missing')" />
         </div>
         <div class="project-info">
           <span class="project-num">02</span>
@@ -198,7 +361,7 @@
 
       <article class="project-item reveal">
         <div class="project-visual">
-          <img src="img/alpha-service.png" alt="Apercu Alpha Service" onerror="this.parentElement.classList.add('img-missing')" />
+          <img src="img/alpha-service.png" alt="Alpha Service – site corporate HTML CSS JavaScript par Ilies Benali" loading="lazy" width="600" height="400" onerror="this.parentElement.classList.add('img-missing')" />
         </div>
         <div class="project-info">
           <span class="project-num">03</span>
@@ -212,7 +375,7 @@
 
       <article class="project-item reveal">
         <div class="project-visual">
-          <img src="img/cluedo.png" alt="Apercu Cluedo" onerror="this.parentElement.classList.add('img-missing')" />
+          <img src="img/cluedo.png" alt="Cluedo – jeu interactif JavaScript développé par Ilies Benali" loading="lazy" width="600" height="400" onerror="this.parentElement.classList.add('img-missing')" />
         </div>
         <div class="project-info">
           <span class="project-num">04</span>
@@ -227,7 +390,11 @@
     </section>
 
     <!-- ── A propos ─────────────────────────────────────────── -->
-    <section id="about" class="section-about shell">
+    <section id="about" class="section-about shell" itemscope itemtype="https://schema.org/Person">
+      <meta itemprop="name" content="Ilies Benali" />
+      <meta itemprop="jobTitle" content="Développeur Web Front-End" />
+      <meta itemprop="email" content="ilies.benali28@gmail.com" />
+      <meta itemprop="url" content="https://iliesbenali.com/" />
       <div class="about-inner reveal">
         <div class="about-text">
           <span class="section-tag" data-i18n="navAbout">A propos</span>
@@ -300,8 +467,10 @@
       </div>
     </section>
 
-    <footer class="site-footer">
-      <p>&copy; <span id="year"></span> Ilies Benali</p>
+    </main><!-- /#content -->
+
+    <footer class="site-footer" role="contentinfo">
+      <p>&copy; <span id="year"></span> Ilies Benali &ndash; Développeur Web Front-End, Chartres</p>
     </footer>
 
     <script src="script.js"></script>
