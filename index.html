@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- ══ SEO — Titre & description ══════════════════════════════════ -->
-    <title>Ilies Benali | Developeur Web Front-End Chartres – Portfolio 2026</title>
-    <meta name="description" content="Ilies Benali, developpeur web front-end a Chartres (Eure-et-Loir). Creation de sites web modernes en HTML, CSS, JavaScript. Portfolio, services web et freelance." />
+    <title>Ilies Benali | Développeur Web Chartres | Portfolio 2026</title>
+    <meta name="description" content="Développeur web front-end à Chartres. Création sites vitrine, portfolio, web apps. HTML, CSS, JavaScript. Freelance, stage, alternance. Expert SEO local." />
     <meta name="keywords" content="developpeur web Chartres, freelance web, developpeur front-end, creation site web, HTML CSS JavaScript, portfolio developpeur, site vitrine, optimisation SEO, Eure-et-Loir, Centre-Val de Loire" />
     <meta name="author" content="Ilies Benali" />
     <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
@@ -48,6 +48,80 @@
     {
       "@context": "https://schema.org",
       "@graph": [
+        {
+          "@type": "Organization",
+          "@id": "https://iliesbenali.com/#organization",
+          "name": "Ilies Benali - Développeur Web",
+          "url": "https://iliesbenali.com/",
+          "description": "Service de développement web professionnel à Chartres. Expert en création sites vitrine, portfolio web et applications web réactives. Spécialisé HTML, CSS, JavaScript, PHP, SEO.",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://iliesbenali.com/favicon.svg",
+            "width": 200,
+            "height": 200
+          },
+          "image": "https://iliesbenali.com/photo.png",
+          "foundingDate": "2024",
+          "founders": [
+            { "@id": "https://iliesbenali.com/#person" }
+          ],
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Chartres",
+            "addressRegion": "Eure-et-Loir",
+            "postalCode": "28000",
+            "addressCountry": "FR"
+          },
+          "areaServed": [
+            { "@type": "City", "name": "Chartres" },
+            { "@type": "AdministrativeArea", "name": "Eure-et-Loir" },
+            { "@type": "AdministrativeArea", "name": "Centre-Val de Loire" },
+            { "@type": "AdministrativeArea", "name": "Île-de-France" }
+          ],
+          "email": "ilies.benali28@gmail.com",
+          "telephone": "+33-6-00-00-00-00",
+          "sameAs": [
+            "https://github.com/i2sbl",
+            "https://www.linkedin.com/in/ilies-benali/",
+            "https://twitter.com/i2sbl"
+          ],
+          "knowsAbout": ["Développement Web", "HTML5", "CSS3", "JavaScript ES6+", "PHP", "SEO Technique", "UX/UI", "Responsive Design", "Performance Web", "Accessibilité Web"],
+          "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "Services de Développement Web",
+            "itemListElement": [
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Création Site Vitrine"
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Optimisation SEO"
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Portfolio Web"
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Application Web Réactive"
+                }
+              }
+            ]
+          },
+          "priceRange": "€"
+        },
         {
           "@type": "LocalBusiness",
           "@id": "https://iliesbenali.com/#localbusiness",
@@ -218,7 +292,65 @@
           ]
         },
         {
-          "@type": "FAQPage",
+          "@type": "Service",
+          "@id": "https://iliesbenali.com/#service-vitrine",
+          "name": "Création Site Vitrine",
+          "description": "Création de sites vitrines modernes, performants et optimisés SEO. Design responsive, navigation fluide, conversion optimisée.",
+          "provider": { "@id": "https://iliesbenali.com/#organization" },
+          "areaServed": { "@id": "https://iliesbenali.com/#localbusiness" },
+          "serviceType": "Web Development",
+          "url": "https://iliesbenali.com/#service",
+          "priceRange": "€",
+          "availableChannel": {
+            "@type": "ServiceChannel",
+            "serviceUrl": "https://iliesbenali.com/#contact"
+          }
+        },
+        {
+          "@type": "Service",
+          "@id": "https://iliesbenali.com/#service-seo",
+          "name": "Optimisation SEO Technique",
+          "description": "Optimisation SEO locale et technique. Structured data, performance web, Core Web Vitals, recherches locales Chartres.",
+          "provider": { "@id": "https://iliesbenali.com/#organization" },
+          "areaServed": { "@id": "https://iliesbenali.com/#localbusiness" },
+          "serviceType": "SEO Optimization",
+          "url": "https://iliesbenali.com/#service",
+          "priceRange": "€",
+          "availableChannel": {
+            "@type": "ServiceChannel",
+            "serviceUrl": "https://iliesbenali.com/#contact"
+          }
+        },
+        {
+          "@type": "Service",
+          "@id": "https://iliesbenali.com/#service-portfolio",
+          "name": "Portfolio Web Professionnel",
+          "description": "Portfolio web professionnel pour développeurs, designers, créatifs. Showcase projets, cas d'études, blog intégré.",
+          "provider": { "@id": "https://iliesbenali.com/#organization" },
+          "areaServed": { "@id": "https://iliesbenali.com/#localbusiness" },
+          "serviceType": "Web Development",
+          "url": "https://iliesbenali.com/#service",
+          "priceRange": "€",
+          "availableChannel": {
+            "@type": "ServiceChannel",
+            "serviceUrl": "https://iliesbenali.com/#contact"
+          }
+        },
+        {
+          "@type": "Service",
+          "@id": "https://iliesbenali.com/#service-webapp",
+          "name": "Application Web Réactive",
+          "description": "Applications web modernes, réactives et performantes. JavaScript ES6+, architecture scalable, UX optimisée.",
+          "provider": { "@id": "https://iliesbenali.com/#organization" },
+          "areaServed": { "@id": "https://iliesbenali.com/#localbusiness" },
+          "serviceType": "Web Development",
+          "url": "https://iliesbenali.com/#service",
+          "priceRange": "€",
+          "availableChannel": {
+            "@type": "ServiceChannel",
+            "serviceUrl": "https://iliesbenali.com/#contact"
+          }
+        },
           "@id": "https://iliesbenali.com/#faq",
           "mainEntity": [
             {
