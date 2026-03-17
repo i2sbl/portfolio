@@ -1,5 +1,65 @@
+# ══ GLOBAL RULES ══════════════════════════════════════════════════
+
 User-agent: *
 Allow: /
+Disallow: /admin/
+Disallow: /private/
+Disallow: /*.pdf$
+Disallow: /temp/
 
-# Sitemap
+# Crawl delay (ms between requests)
+Crawl-delay: 1
+Request-rate: 30/1m
+
+# ══ GOOGLE SPECIFIC ════════════════════════════════════════════════
+
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 0
+Request-rate: 500/1m
+
+User-agent: Googlebot-Image
+Allow: /img/
+Allow: *.png
+Allow: *.jpg
+Allow: *.webp
+
+# ══ BING SPECIFIC ══════════════════════════════════════════════════
+
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
+Request-rate: 100/1m
+
+User-agent: Bingbot-Image
+Allow: /img/
+
+# ══ QWANT SPECIFIC ═════════════════════════════════════════════════
+
+User-agent: Qwantbot
+Allow: /
+Crawl-delay: 1
+
+# ══ OTHER SEARCH ENGINES ═══════════════════════════════════════════
+
+User-agent: DuckDuckGo
+Allow: /
+
+User-agent: Yandex
+Allow: /
+
+# ══ BAD BOTS ═══════════════════════════════════════════════════════
+
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: SemrushBot
+Crawl-delay: 10
+
+# ══ SITEMAPS ═══════════════════════════════════════════════════════
+
 Sitemap: https://iliesbenali.com/sitemap.xml
+Sitemap: https://iliesbenali.com/sitemap-images.xml

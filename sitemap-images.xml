@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+
+  <url>
+    <loc>https://iliesbenali.com/</loc>
+    <image:image>
+      <image:loc>https://iliesbenali.com/photo.png</image:loc>
+      <image:title>Ilies Benali - Développeur Web Front-End</image:title>
+      <image:caption>Photo professionnelle d'Ilies Benali</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://iliesbenali.com/og-image.png</image:loc>
+      <image:title>Portfolio Ilies Benali</image:title>
+      <image:caption>Image Open Graph du portfolio</image:caption>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://iliesbenali.com/#projets</loc>
+    <image:image>
+      <image:loc>https://iliesbenali.com/img/fc-fulbert.png</image:loc>
+      <image:title>FC Fulbert - Site vitrine sportif SEO</image:title>
+      <image:caption>Site vitrine sportif moderne avec navigation fluide et SEO optimisé</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://iliesbenali.com/img/yournextcar.png</image:loc>
+      <image:title>YourNextCar - Plateforme automobile</image:title>
+      <image:caption>Plateforme automobile avec structure claire et navigation rapide</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://iliesbenali.com/img/alpha-service.png</image:loc>
+      <image:title>Alpha Service - Site corporate</image:title>
+      <image:caption>Site corporate professionnel orienté conversion et contact client</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://iliesbenali.com/img/cluedo.png</image:loc>
+      <image:title>Cluedo - Jeu interactif JavaScript</image:title>
+      <image:caption>Jeu Cluedo interactif développé en JavaScript pur avec logique complète</image:caption>
+    </image:image>
+  </url>
+
+</urlset>
